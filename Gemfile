@@ -38,6 +38,8 @@ group :doc do
 end
 
 gem 'slim'
+gem 'jira-ruby', :require => 'jira'
+gem 'heroku'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
