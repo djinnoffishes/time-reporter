@@ -5,28 +5,28 @@ html
   body
     h2 Weekly Tilting Point time report - #{Time.now.strftime("%m/%I/%y")}
     br
-    h4 This week
+    h3 This week
     hr
     p 
       strong Toy Rush DevOps:
-      | 10
+      = @tr_devops
     p 
       strong Toy Rush PM:
       | 2
     p
       strong TSP DevOps:
-      | 14
+      = @tsp_devops
     p
       strong TSP PM:
       | 4
     p
       strong Castle Siege DevOps:
-      | 12
+      = @cs_devops
     p
       strong Castle Siege PM:
       | 6
     hr
-    h4 This month
+    h3 This month
     p 
       strong Toy Rush DevOps:
       | 100
@@ -45,6 +45,8 @@ html
     p
       strong Castle Siege PM:
       | 63
+    hr
+    h3 Totals
     hr
     p
       strong Toy Rush DevOps Total:
@@ -65,9 +67,5 @@ html
     p 
       - @tsp.each do |i|
         p
-          = i.key
-        p 
-          = i.timespent
-        p
-          = i.aggregatetimespent
+          = i.aggregatetimespent / 3600
       end
