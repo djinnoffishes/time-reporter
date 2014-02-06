@@ -9,19 +9,19 @@ html
     hr
     p 
       strong Toy Rush DevOps:
-      = @tr_devops
+      = @tr_devops[0]
     p 
       strong Toy Rush PM:
       | 2
     p
       strong TSP DevOps:
-      = @tsp_devops
+      = @tsp_devops[0]
     p
       strong TSP PM:
       | 4
     p
       strong Castle Siege DevOps:
-      = @cs_devops
+      = @cs_devops[0]
     p
       strong Castle Siege PM:
       | 6
@@ -64,8 +64,3 @@ html
       strong CS DevOps Total:
     p
       strong CS PM Total: 
-    p 
-      - @tsp.each do |i|
-        p
-          = i.aggregatetimespent / 3600
-      end
