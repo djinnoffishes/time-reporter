@@ -7,6 +7,36 @@ html
     br
     h3 This week
     hr
+    table
+      tr
+        th
+          '--
+        th
+          'DevOps
+        th
+          'PM
+      tr
+        td
+          'Toy Rush
+        td
+          = @tr_devops_w[0]
+        td
+          = @tr_pm_w[0]
+      tr
+        td
+          'Castle Siege
+        td
+          = @cs_devops_w[0]
+        td
+          = @cs_pm_w[0]
+      tr
+        td
+          'TSP
+        td
+          = @tsp_devops_w[0]
+        td
+          = @tsp_pm_w[0]
+
     p
       strong Toy Rush DevOps:
       = @tr_devops_w[0]
