@@ -12,7 +12,7 @@ class ReportMailer < ActionMailer::Base
               @mx_devops  = [0,'MX']]
     titles.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND (assignee = 'sge.jared.punzel' OR assignee = 'sge.ted.staberow')").each do |i|
-        t[0] += i.timespent / 3600
+        t[0] += i.timespent / 3600 if i
       end
     end
     mail(to: 'mitch.yarchin@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%m/%I/%y"))
