@@ -11,7 +11,7 @@ class ReportMailer < ActionMailer::Base
               @ft_devops  = [0,'FT'], 
               @mx_devops  = [0,'MX']]
     titles.each do |t|
-      CLIENT.Issue.jql("project = 'Tilting Point' AND labels = TSP AND (assignee = 'sge.jared.punzel' OR assignee = 'sge.ted.staberow')").each do |i|
+      CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND (assignee = 'sge.jared.punzel' OR assignee = 'sge.ted.staberow')").each do |i|
         t[0] += i.timespent / 3600
       end
     end
