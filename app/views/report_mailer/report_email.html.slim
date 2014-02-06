@@ -5,129 +5,114 @@ html
   body
     h2 Weekly Tilting Point time report - #{Time.now.strftime("%m/%I/%y")}
     br
-    h3 This week
     hr
+    h3 This week
     table
       tr
-        th
-          '--
-        th
-          'DevOps
-        th
-          'PM
+        th Game Title
+        th DevOps
+        th PM
       tr
-        td
-          'Toy Rush
+        td Toy Rush
         td
           = @tr_devops_w[0]
         td
           = @tr_pm_w[0]
       tr
-        td
-          'Castle Siege
+        td Castle Siege
         td
           = @cs_devops_w[0]
         td
           = @cs_pm_w[0]
       tr
-        td
-          'TSP
+        td The Sleeping Prince
         td
           = @tsp_devops_w[0]
         td
           = @tsp_pm_w[0]
-
-    p
-      strong Toy Rush DevOps:
-      = @tr_devops_w[0]
-    p
-      strong Toy Rush PM:
-      = @tr_pm_w[0]
-    p
-      strong Castle Siege DevOps:
-      = @cs_devops_w[0]
-    p
-      strong Castle Siege PM:
-      = @cs_pm_w[0]
-    p
-      strong TSP DevOps:
-      = @tsp_devops_w[0]
-    p
-      strong TSP PM:
-      = @tsp_pm_w[0]
-    p
-      strong Fortress DevOps:
-      = @ft_devops_w[0]
-    p
-      strong Fortress PM: 
-      = @ft_devops_w[0]
-    p
-      strong Monster X DevOps: 
-      = @mx_devops_w[0]
-    p
-      strong Monster X PM: 
-      = @mx_pm_w[0]
+      tr
+        td Fortress
+        td
+          = @ft_devops_w[0]
+        td
+          = @ft_pm_w[0]
+      tr
+        td Monster X
+        td
+          = @mx_devops_w[0]
+        td
+          = @mx_pm_w[0]
     hr
     h3 This month
-    p
-      strong Toy Rush DevOps:
-      = @tr_devops_m[0]
-    p
-      strong Toy Rush PM:
-      = @tr_pm_m[0]
-    p
-      strong Castle Siege DevOps:
-      = @cs_devops_m[0]
-    p
-      strong Castle Siege PM:
-      = @cs_pm_m[0]
-    p
-      strong TSP DevOps:
-      = @tsp_devops_m[0]
-    p
-      strong TSP PM:
-      = @tsp_pm_m[0]
-    p
-      strong Fortress DevOps:
-      = @ft_devops_m[0]
-    p
-      strong Fortress PM: 
-      = @ft_devops_m[0]
-    p
-      strong Monster X DevOps: 
-      = @mx_devops_m[0]
-    p
-      strong Monster X PM: 
-      = @mx_pm_m[0]
+    table
+      tr
+        th Game Title
+        th DevOps
+        th PM
+      tr
+        td Toy Rush
+        td
+          = @tr_devops_m[0]
+        td
+          = @tr_pm_m[0]
+      tr
+        td Castle Siege
+        td
+          = @cs_devops_m[0]
+        td
+          = @cs_pm_m[0]
+      tr
+        td The Sleeping Prince
+        td
+          = @tsp_devops_m[0]
+        td
+          = @tsp_pm_m[0]
+      tr
+        td Fortress
+        td
+          = @ft_devops_m[0]
+        td
+          = @ft_pm_m[0]
+      tr
+        td Monster X
+        td
+          = @mx_devops_m[0]
+        td
+          = @mx_pm_m[0]
     hr
     h3 Totals
-    p
-      strong Toy Rush DevOps Total:
-      = @tr_devops_t[0]
-    p
-      strong Toy Rush PM Total:
-      = @tr_pm_t[0]
-    p
-      strong Castle Siege DevOps Total:
-      = @cs_devops_t[0]
-    p
-      strong Castle Siege PM Total:
-      = @cs_pm_t[0]
-    p
-      strong TSP DevOps Total:
-      = @tsp_devops_t[0]
-    p
-      strong TSP PM Total:
-      = @tsp_pm_t[0]
-    p
-      strong Fortress DevOps Total:
-      = @ft_devops_t[0]
-    p
-      strong Fortress PM Total: 
-      = @ft_devops_t[0]
-    p
-      strong Monster X DevOps Total: 
-      = @mx_devops_t[0]
-    p
-      strong Monster X PM Total: 
-      = @mx_pm_t[0]
+    table
+      tr
+        th Game Title
+        th DevOps
+        th PM
+      tr
+        td Toy Rush
+        td
+          = @tr_devops_t[0]
+        td
+          = @tr_pm_t[0]
+      tr
+        td Castle Siege
+        td
+          = @cs_devops_t[0]
+        td
+          = @cs_pm_t[0]
+      tr
+        td The Sleeping Prince
+        td
+          = @tsp_devops_t[0]
+        td
+          = @tsp_pm_t[0]
+      tr
+        td Fortress
+        td
+          = @ft_devops_t[0]
+        td
+          = @ft_pm_t[0]
+      tr
+        td Monster X
+        td
+          = @mx_devops_t[0]
+        td
+          = @mx_pm_t[0]
