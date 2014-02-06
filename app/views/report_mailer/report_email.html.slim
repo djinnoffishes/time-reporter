@@ -63,4 +63,11 @@ html
     p
       strong CS PM Total: 
     p 
-      = @tsp
+      - @tsp.each do |i|
+      p
+        = i.key
+      p 
+        = i.timespent
+      p
+        = i.aggregatetimespent
+      end
