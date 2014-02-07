@@ -62,7 +62,7 @@ html
         td
           = @cs_pm_m[0]
       tr
-        td The Sleeping Prince
+        td The Sleeping Prince&nbsp;&nbsp;
         td
           = @tsp_devops_m[0]
         td
@@ -86,33 +86,45 @@ html
         th Game Title
         th DevOps
         th PM
+        th Total (PM+DevOps)
       tr
         td Toy Rush
         td
           = @tr_devops_t[0]
         td
           = @tr_pm_t[0]
+        td
+          = @tr_devops_t[0] + @tr_pm_t[0]
       tr
         td Castle Siege
         td
           = @cs_devops_t[0]
         td
           = @cs_pm_t[0]
+        td
+          = @cs_devops_t[0] + @cs_pm_t[0]
       tr
-        td The Sleeping Prince
+        td The Sleeping Prince&nbsp;&nbsp;
         td
           = @tsp_devops_t[0]
         td
           = @tsp_pm_t[0]
+        td
+          = @tsp_devops_t[0] + @tsp_pm_t[0]
       tr
         td Fortress
         td
           = @ft_devops_t[0]
         td
           = @ft_pm_t[0]
+        td
+          = @ft_devops_t[0] + @ft_pm_t[0]
       tr
         td Monster X
         td
           = @mx_devops_t[0]
         td
           = @mx_pm_t[0]
+        td
+          = @mx_devops_t[0] + @mx_pm_t[0]
+    p 

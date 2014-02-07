@@ -14,7 +14,7 @@ class ReportMailer < ActionMailer::Base
               @mx_devops_t  = [0,'MX']]
     devops.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-infra')").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
     
@@ -27,7 +27,7 @@ class ReportMailer < ActionMailer::Base
           @mx_pm_t  = [0,'MX']]
     pm.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-pmo')").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
 
@@ -40,7 +40,7 @@ class ReportMailer < ActionMailer::Base
               @mx_devops_w  = [0,'MX']]
     devops.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-infra') AND updatedDate >= startOfWeek()").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
 
@@ -53,7 +53,7 @@ class ReportMailer < ActionMailer::Base
           @mx_pm_w  = [0,'MX']]
     pm.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-pmo') AND updatedDate >= startOfWeek()").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
 
@@ -66,7 +66,7 @@ class ReportMailer < ActionMailer::Base
               @mx_devops_m  = [0,'MX']]
     devops.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-infra') AND updatedDate >= startOfMonth()").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
 
@@ -79,7 +79,7 @@ class ReportMailer < ActionMailer::Base
           @mx_pm_m  = [0,'MX']]
     pm.each do |t|
       CLIENT.Issue.jql("project = 'Tilting Point' AND labels = #{t[1]} AND assignee in membersOf('sleepygiant-pmo') AND updatedDate >= startOfMonth()").each do |i|
-        t[0] += i.timespent / 3600 if i.timespent
+        t[0] += i.aggregatetimespent / 3600 if i.aggregatetimespent
       end
     end
 
