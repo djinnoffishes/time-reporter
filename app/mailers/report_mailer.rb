@@ -87,7 +87,7 @@ class ReportMailer < ActionMailer::Base
       end
     end
 
-    mail(to: 'mitch.yarchin@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%D"))
+    mail(to: 'stuart@sleepygiant.com, dsl@sleepygiant.com, mitch.yarchin@sleepygiant.com, tp_tech@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%D"))
   end
 
 end
