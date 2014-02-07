@@ -3,9 +3,8 @@ html
   head
     meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
   body
-    h2 Weekly Tilting Point time report - #{Time.now.strftime("%m/%I/%y")}
+    p These are hourly numbers.
     br
-    hr
     h3
       | This week #{@start_of_week} - #{@now}
     table
@@ -88,7 +87,7 @@ html
         th Game Title
         th DevOps
         th PM
-        th Total (PM+DevOps)
+        th Combined Total
       tr
         td Toy Rush
         td
