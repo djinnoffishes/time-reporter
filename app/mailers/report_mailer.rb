@@ -4,6 +4,9 @@ class ReportMailer < ActionMailer::Base
   default from: 'pmo@sleepygiant.com'
 
   def report_email
+    @start_of_week = (DateTime.now - 7).strftime("%D")
+    @now = DateTime.now.strftime("%D")
+    @start_of_month = (DateTime.now - 30).strftime("%D")
    
     # devops total hours
     devops = [@tsp_devops_t = [0,'TSP'],
@@ -83,7 +86,7 @@ class ReportMailer < ActionMailer::Base
       end
     end
 
-    mail(to: 'mitch.yarchin@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%m/%I/%y"))
+    mail(to: 'mitch.yarchin@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%D"))
   end
 
 end

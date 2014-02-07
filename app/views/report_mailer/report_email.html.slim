@@ -7,6 +7,7 @@ html
     br
     hr
     h3 This week
+      = ' #{@start_of_week} - #{@now}'
     table
       tr
         th Game Title
@@ -44,6 +45,7 @@ html
           = @mx_pm_w[0]
     hr
     h3 This month
+      = ' #{@start_of_month} - #{@now}'
     table
       tr
         th Game Title
@@ -127,4 +129,6 @@ html
           = @mx_pm_t[0]
         td
           = @mx_devops_t[0] + @mx_pm_t[0]
+    br
+    br
     p <a href="https://jira.sleepygiant.com/secure/Dashboard.jspa?selectPageId=11502">Click here</a> to see the Jira dashboard
