@@ -3,6 +3,7 @@ html
   head
     meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
   body
+    p All times below are in hours.
     br
     hr
     h3
@@ -42,6 +43,7 @@ html
           = @mx_devops_w[0]
         td
           = @mx_pm_w[0]
+    br
     hr
     h3
       | This month #{@start_of_month} - #{@now}
@@ -80,6 +82,7 @@ html
           = @mx_devops_m[0]
         td
           = @mx_pm_m[0]
+    br
     hr
     h3 Totals
     table

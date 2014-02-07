@@ -2,6 +2,7 @@ class ReportMailer < ActionMailer::Base
   include JiraQuery
   
   default from: 'pmo@sleepygiant.com'
+  default reply_to: 'mitch.yarchin@sleepygiant.com'
 
   def report_email
     @start_of_week = (DateTime.now - 7).strftime("%D")
@@ -86,7 +87,7 @@ class ReportMailer < ActionMailer::Base
       end
     end
 
-    mail(to: 'mitch.yarchin@sleepygiant.com', subject: 'TP Time Reports - ' + Time.now.strftime("%D"))
+    mail(to: 'mitch.yarchin@sleepygiant.com, wabbitsnot@gmail.com', subject: 'TP Time Reports - ' + Time.now.strftime("%D"))
   end
 
 end
