@@ -6,8 +6,8 @@ html
     h2 Weekly Tilting Point time report - #{Time.now.strftime("%m/%I/%y")}
     br
     hr
-    h3 This week
-      = " #{@start_of_week} - #{@now}"
+    h3
+      | This week #{@start_of_week} - #{@now}
     table
       tr
         th Game Title
@@ -44,8 +44,8 @@ html
         td
           = @mx_pm_w[0]
     hr
-    h3 This month
-      = " #{@start_of_month} - #{@now}"
+    h3
+      | This month #{@start_of_month} - #{@now}
     table
       tr
         th Game Title
