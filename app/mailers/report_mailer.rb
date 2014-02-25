@@ -7,7 +7,7 @@ class ReportMailer < ActionMailer::Base
   def report_email
     @start_of_week = (DateTime.now - 7).strftime("%D")
     @now = DateTime.now.strftime("%D")
-    @start_of_month = (DateTime.now - 30).strftime("%D")
+    @start_of_month = Date::MONTHNAMES[Date.today.month]
    
     # devops total hours
     devops = [@tsp_devops_t = [0,'TSP'],
