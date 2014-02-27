@@ -1,28 +1,9 @@
-== README
+== Time reporter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This sends email reports for logged hours in Tilting Point project, every week.
 
-Things you may want to cover:
+How it works:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- There's a rake task in lib/tasks/schedule.rake that grabs a template from mailers/report_mailer and delivers it to some email recipients via sendgrid. 
+- The task checks if Time.now is Friday, and the hosted version (https://dashboard.heroku.com/apps/time-reporter) uses Heroku's Scheduler to run every day at 12PM PST.
+- You can edit the sender, replyto, and recipients list in report_mailer.rb
