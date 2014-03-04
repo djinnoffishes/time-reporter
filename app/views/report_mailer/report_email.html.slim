@@ -3,134 +3,27 @@ html
   head
     meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
   body
-    p This is an automated report of Jira hours for project Tilting Point.
-    br
-    hr
-    h3
-      | This week #{@start_of_week} - #{@now}
-    table
-      tr
-        th Game Title
-        th DevOps
-        th PM
-      tr
-        td Toy Rush
-        td
-          = @tr_devops_w[0]
-        td
-          = @tr_pm_w[0]
-      tr
-        td Castle Siege
-        td
-          = @cs_devops_w[0]
-        td
-          = @cs_pm_w[0]
-      tr
-        td The Sleeping Prince&nbsp;&nbsp;
-        td
-          = @tsp_devops_w[0]
-        td
-          = @tsp_pm_w[0]
-      tr
-        td Fortress
-        td
-          = @ft_devops_w[0]
-        td
-          = @ft_pm_w[0]
-      tr
-        td Monster X
-        td
-          = @mx_devops_w[0]
-        td
-          = @mx_pm_w[0]
-    br
-    hr
-    h3
-      | Monthly totals: #{@current_month}
-    table
-      tr
-        th Game Title
-        th DevOps
-        th PM
-      tr
-        td Toy Rush
-        td
-          = @tr_devops_m[0]
-        td
-          = @tr_pm_m[0]
-      tr
-        td Castle Siege
-        td
-          = @cs_devops_m[0]
-        td
-          = @cs_pm_m[0]
-      tr
-        td The Sleeping Prince&nbsp;&nbsp;
-        td
-          = @tsp_devops_m[0]
-        td
-          = @tsp_pm_m[0]
-      tr
-        td Fortress
-        td
-          = @ft_devops_m[0]
-        td
-          = @ft_pm_m[0]
-      tr
-        td Monster X
-        td
-          = @mx_devops_m[0]
-        td
-          = @mx_pm_m[0]
+    p This is an automated report of Jira hours for project Example Project.
     br
     hr
     h3 Totals
     table
       tr
-        th Game Title
-        th DevOps
-        th PM
-        th Combined Total
+        th Example Colmun 1
+        th Example Colmun 2
+        th Example Colmun 3
       tr
-        td Toy Rush
+        td Example Role 1
         td
-          = @tr_devops_t[0]
+          = @example[0]
         td
-          = @tr_pm_t[0]
-        td
-          = @tr_devops_t[0] + @tr_pm_t[0]
+          = @example[0]
       tr
-        td Castle Siege
+        td Example Role 2
         td
-          = @cs_devops_t[0]
+          = @example[0]
         td
-          = @cs_pm_t[0]
-        td
-          = @cs_devops_t[0] + @cs_pm_t[0]
-      tr
-        td The Sleeping Prince&nbsp;&nbsp;
-        td
-          = @tsp_devops_t[0]
-        td
-          = @tsp_pm_t[0]
-        td
-          = @tsp_devops_t[0] + @tsp_pm_t[0]
-      tr
-        td Fortress
-        td
-          = @ft_devops_t[0]
-        td
-          = @ft_pm_t[0]
-        td
-          = @ft_devops_t[0] + @ft_pm_t[0]
-      tr
-        td Monster X
-        td
-          = @mx_devops_t[0]
-        td
-          = @mx_pm_t[0]
-        td
-          = @mx_devops_t[0] + @mx_pm_t[0]
+          = @example[0]
     br
     br
-    p <a href="https://jira.sleepygiant.com/secure/Dashboard.jspa?selectPageId=11502">Click here</a> to see the Jira dashboard
+    p <a href="https://example-jira-url">Click here</a> to see the Jira report.

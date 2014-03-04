@@ -7,3 +7,10 @@ How it works:
 - There's a rake task in lib/tasks/schedule.rake that grabs a template from mailers/report_mailer and delivers it to some email recipients via sendgrid. 
 - The task checks if Time.now is Friday, and the hosted version (https://dashboard.heroku.com/apps/time-reporter) uses Heroku's Scheduler to run every day at 12PM PST.
 - You can edit the sender, replyto, and recipients list in report_mailer.rb
+
+Setup:
+1. git clone
+2. change SMTP settings in environment.rb
+3. change Jira report config in report_mailer.rb
+4. change email addresses in report_mailer.rb
+5. change report layout in report_email.html.slim to match your preference
