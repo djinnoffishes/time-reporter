@@ -1,6 +1,6 @@
 == Time reporter
 
-This sends email reports for logged hours in Tilting Point project, every week.
+This sends email reports for logged hours in a given Jira project with a given label, every Friday.
 
 How it works:
 
